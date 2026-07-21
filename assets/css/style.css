@@ -1383,3 +1383,185 @@ footer {
     opacity: 0.3;
   }
 }
+
+/* ==========================================================================
+   Comprehensive A to Z Responsive Design System
+   ========================================================================== */
+
+/* Extra Large Screens (Desktops >= 1200px) */
+@media (min-width: 1200px) {
+  .hero-title {
+    font-size: 3.8rem;
+  }
+  .container {
+    max-width: 1140px;
+  }
+}
+
+/* Large Tablets & Small Laptops (992px - 1199px) */
+@media (max-width: 1199px) and (min-width: 992px) {
+  .hero-title {
+    font-size: 3.2rem;
+  }
+  .section-padding {
+    padding: 80px 0;
+  }
+}
+
+/* Medium Tablets & Mobile Landscape (768px - 991px) */
+@media (max-width: 991px) {
+  .hero-section {
+    padding-top: 110px;
+    min-height: auto;
+  }
+  
+  .hero-title {
+    font-size: 2.75rem;
+    line-height: 1.25;
+  }
+  
+  .section-padding {
+    padding: 70px 0;
+  }
+
+  /* Navbar Collapse Styling for Mobile/Tablet */
+  .navbar-collapse {
+    background: var(--glass-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    padding: 20px;
+    margin-top: 15px;
+    box-shadow: var(--glass-shadow);
+  }
+
+  .nav-link-custom {
+    padding: 10px 15px !important;
+    text-align: center;
+  }
+  
+  .nav-link-custom::after {
+    display: none;
+  }
+
+  .contact-info-item {
+    margin-bottom: 20px;
+  }
+
+  .footer-logo-img {
+    max-height: 45px;
+  }
+}
+
+/* Small Tablets & Large Smartphones (576px - 767px) */
+@media (max-width: 767px) {
+  .hero-title {
+    font-size: 2.2rem;
+    letter-spacing: -0.01em;
+  }
+
+  .hero-badge {
+    font-size: 0.85rem !important;
+  }
+
+  .hero-desc {
+    font-size: 1.1rem;
+  }
+
+  .hero-ctas .btn {
+    width: 100%;
+  }
+
+  .section-padding {
+    padding: 50px 0;
+  }
+
+  .portfolio-filter-btn {
+    padding: 8px 16px;
+    font-size: 0.85rem;
+    margin: 4px;
+  }
+
+  .glass-card {
+    padding: 20px !important;
+  }
+
+  .testimonial-card {
+    padding: 25px 20px;
+  }
+
+  .stat-number {
+    font-size: 2.5rem;
+  }
+
+  .whatsapp-float-btn {
+    width: 48px;
+    height: 48px;
+    font-size: 1.6rem;
+    bottom: 20px;
+    right: 20px;
+  }
+
+  .back-to-top-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1.1rem;
+    bottom: 80px;
+    right: 20px;
+  }
+
+  .modal-dialog {
+    margin: 10px;
+  }
+  
+  .modal-body {
+    padding: 20px !important;
+  }
+}
+
+/* Ultra Small Phones (320px - 575px) */
+@media (max-width: 575px) {
+  .hero-title {
+    font-size: 1.85rem;
+  }
+
+  .display-5 {
+    font-size: 1.75rem;
+  }
+
+  .brand-logo-img {
+    max-height: 30px;
+  }
+
+  .hero-socials {
+    gap: 8px !important;
+  }
+
+  .footer-social-link {
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+  }
+
+  .skill-card {
+    padding: 15px 10px !important;
+  }
+
+  .skill-icon-box {
+    width: 42px;
+    height: 42px;
+    font-size: 1.2rem;
+  }
+
+  .map-container {
+    height: 200px;
+  }
+
+  /* Prevent any side scrolling */
+  body, html {
+    overflow-x: hidden !important;
+    width: 100%;
+  }
+}
+
