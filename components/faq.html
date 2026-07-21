@@ -1,0 +1,73 @@
+<!-- ==========================================================================
+     Section: FAQ Accordion
+     ========================================================================== -->
+<section id="faq" class="section-padding bg-surface position-relative">
+  <div class="container">
+    <div class="text-center mb-5 max-w-700 mx-auto" data-aos="fade-up">
+      <span class="text-primary text-uppercase fw-bold letter-spacing-2 small d-block mb-2">Q&A</span>
+      <h2 class="display-5 fw-extrabold mb-3">Frequently Asked Questions</h2>
+      <p class="text-muted col-lg-8 mx-auto">
+        Find answers on how we handle design scopes, payment installments, and software maintenance plans.
+      </p>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-lg-8" data-aos="fade-up">
+        <div class="accordion accordion-custom" id="faqAccordion">
+          <!-- FAQ 1 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Can you integrate custom ERP systems with our existing SQL/Oracle databases?
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Yes, absolutely. Using Laravel's secure DB connection wrappers, we can hook up patient data tables, stock rows, and billing lines into existing SQL Server, MySQL, Postgres, or Oracle setups with full data mapping consistency.
+              </div>
+            </div>
+          </div>
+          <!-- FAQ 2 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                What is your design turnaround process for an Awwwards-quality layout?
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                We usually start with low-fidelity structure wireframes within the first 5 days. Once you approve the layout mapping, we build high-fidelity interactive screens incorporating custom gradients, animations, and dark/light toggles in 7 to 10 days.
+              </div>
+            </div>
+          </div>
+          <!-- FAQ 3 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Do you provide lifetime server maintenance and update plans?
+              </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Yes, we offer ongoing SLA maintenance contracts that cover monthly dependency upgrades, database backup configurations, security firewalls, and page load speed optimizations to keep Lighthouse scores above 95.
+              </div>
+            </div>
+          </div>
+          <!-- FAQ 4 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFour">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                Is your code structure directly compatible with PHP / Laravel framework blades?
+              </button>
+            </h2>
+            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Yes. The HTML sections are divided into clear semantic blocks (nav, header, sections, footer). The CSS classes are fully aligned with Bootstrap 5 utility rules and layout scopes, making it extremely easy to split into Laravel Blade layouts (`app.blade.php`) and component sections.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

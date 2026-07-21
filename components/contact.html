@@ -1,0 +1,117 @@
+<!-- ==========================================================================
+     Section: Contact Section
+     ========================================================================== -->
+<section id="contact" class="section-padding bg-surface position-relative">
+  <div class="container">
+    <div class="text-center mb-5 max-w-700 mx-auto" data-aos="fade-up">
+      <span class="text-primary text-uppercase fw-bold letter-spacing-2 small d-block mb-2">Start a Project</span>
+      <h2 class="display-5 fw-extrabold mb-3">Get In Touch</h2>
+      <p class="text-muted col-lg-8 mx-auto">
+        Contact our senior developers and UI/UX designers to discuss product details.
+      </p>
+    </div>
+
+    <div class="row g-5">
+      <!-- Contact details -->
+      <div class="col-lg-5" data-aos="fade-right">
+        <h3 class="fw-bold mb-4">Agency Contact Info</h3>
+        <p class="text-muted mb-5 col-lg-11">
+          Fill in the contact form or connect via WhatsApp and email. We usually respond within 2 business hours.
+        </p>
+
+        <div class="contact-info-item">
+          <div class="contact-info-icon"><i class="bi bi-envelope-fill"></i></div>
+          <div>
+            <h6 class="fw-bold mb-0">Send an Email</h6>
+            <a href="mailto:Hafizmuhammadayub90@gmail.com" class="text-muted small">Hafizmuhammadayub90@gmail.com</a>
+          </div>
+        </div>
+
+        <div class="contact-info-item">
+          <div class="contact-info-icon"><i class="bi bi-telephone-fill"></i></div>
+          <div>
+            <h6 class="fw-bold mb-0">Phone & WhatsApp</h6>
+            <a href="tel:+923341384838" class="text-muted small">+92 334 1384838</a>
+          </div>
+        </div>
+
+        <div class="contact-info-item">
+          <div class="contact-info-icon"><i class="bi bi-geo-alt-fill"></i></div>
+          <div>
+            <h6 class="fw-bold mb-0">Our Location</h6>
+            <span class="text-muted small">Karachi, Pakistan</span>
+          </div>
+        </div>
+
+        <!-- Google Maps Embed Representation -->
+        <div class="map-container mt-4">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.2412635905206!2d-73.98656668459371!3d40.758066579326884!2m3!1f0!2f0!3f0!2m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25859a510f277%3A0x6e9f193cb99c8f30!2sTimes%20Square!5e0!3m2!1sen!2s!4v1658826500588!5m2!1sen!2s" 
+            width="100%" 
+            height="100%" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Office Location Map">
+          </iframe>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="col-lg-7" data-aos="fade-left">
+        <div class="glass-card p-4 p-md-5">
+          <h3 class="fw-bold mb-4">Request a Proposal</h3>
+          <form id="contact-form" class="needs-validation" novalidate>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label for="name" class="form-label small text-muted">Full Name</label>
+                <input type="text" class="form-control form-control-custom" id="name" required placeholder="Ayub">
+                <div class="invalid-feedback">Please enter your name.</div>
+              </div>
+              <div class="col-md-6">
+                <label for="email" class="form-label small text-muted">Email Address</label>
+                <input type="email" class="form-control form-control-custom" id="email" required placeholder="name@example.com">
+                <div class="invalid-feedback">Please enter a valid email.</div>
+              </div>
+              <div class="col-12">
+                <label for="subject" class="form-label small text-muted">Project Type</label>
+                <select class="form-select form-control-custom" id="subject" required>
+                  <option value="" disabled selected>Select service type...</option>
+                  <option value="erp">Hospital ERP System</option>
+                  <option value="pos">Inventory & POS System</option>
+                  <option value="shopify">Shopify E-Commerce</option>
+                  <option value="mobile">Flutter Mobile App</option>
+                  <option value="design">UI/UX Design Package</option>
+                </select>
+                <div class="invalid-feedback">Please select a project type.</div>
+              </div>
+              <div class="col-12">
+                <label for="message" class="form-label small text-muted">Project Description</label>
+                <textarea class="form-control form-control-custom" id="message" rows="5" required placeholder="Describe your project goals, deadlines, and specs..."></textarea>
+                <div class="invalid-feedback">Please provide details about your request.</div>
+              </div>
+              <div class="col-12 mt-4">
+                <button type="submit" class="btn btn-primary-custom w-100 btn-ripple">Send Proposal Request</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Form Success Feedback Modal -->
+<div class="modal fade" id="formFeedbackModal" tabindex="-1" aria-labelledby="feedbackTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content bg-surface border-0 rounded-4 p-4 text-center">
+      <div class="modal-body">
+        <i class="bi bi-check-circle-fill text-success display-4 mb-3"></i>
+        <h4 class="fw-bold mb-2" id="feedbackTitle">Proposal Request Received</h4>
+        <p class="text-muted mb-4">Thank you! Your project details have been safely logged. A senior developer will contact you within 2 business hours.</p>
+        <button type="button" class="btn btn-primary-custom" data-bs-dismiss="modal">Back to Portfolio</button>
+      </div>
+    </div>
+  </div>
+</div>
