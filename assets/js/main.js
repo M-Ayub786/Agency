@@ -485,14 +485,14 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ==========================================================================
-  // Form Submission & Contact Interaction
+  // Form Submission & WhatsApp Direct Redirection
   // ==========================================================================
   const contactForm = document.getElementById('contact-form');
   if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
       e.preventDefault();
 
-      // Simple Bootstrap form validation visual triggers
+      // Bootstrap form validation check
       if (!contactForm.checkValidity()) {
         e.stopPropagation();
         contactForm.classList.add('was-validated');
@@ -500,37 +500,46 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       contactForm.classList.remove('was-validated');
-      const submitBtn = contactForm.querySelector('button[type="submit"]');
-      const originalText = submitBtn.innerHTML;
 
-      // Visual feedback loading state
-      submitBtn.disabled = true;
-      submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Sending...';
+      // Fetch input values
+      const nameVal = document.getElementById('name') ? document.getElementById('name').value.trim() : '';
+      const emailVal = document.getElementById('email') ? document.getElementById('email').value.trim() : '';
+      const phoneVal = document.getElementById('phone') ? document.getElementById('phone').value.trim() : 'Not provided';
+      const budgetSelect = document.getElementById('budget');
+      const budgetVal = budgetSelect && budgetSelect.options[budgetSelect.selectedIndex] && budgetSelect.value ? budgetSelect.options[budgetSelect.selectedIndex].text : 'Not specified';
+      const subjectSelect = document.getElementById('subject');
+      const subjectVal = subjectSelect && subjectSelect.options[subjectSelect.selectedIndex] ? subjectSelect.options[subjectSelect.selectedIndex].text : '';
+      const messageVal = document.getElementById('message') ? document.getElementById('message').value.trim() : '';
 
-      // Simulate API submit delay
-      setTimeout(() => {
-        submitBtn.innerHTML = '<i class="bi bi-check-circle-fill"></i> Sent Successfully!';
-        submitBtn.classList.remove('btn-primary-custom');
-        submitBtn.classList.add('btn-success');
-        
-        // Show bootstrap modal alert or toast
-        const feedbackModalEl = document.getElementById('formFeedbackModal');
-        if (feedbackModalEl) {
-          const feedbackModal = new bootstrap.Modal(feedbackModalEl);
-          feedbackModal.show();
-        }
+      // Format WhatsApp message using universal wa.me link
+      const whatsappNumber = '923341384838';
+      const formattedMessage = 
+        `*📥 New Proposal Request (Portfolio)*\n\n` +
+        `👤 *Name:* ${nameVal}\n` +
+        `📧 *Email:* ${emailVal}\n` +
+        `📞 *Phone/WhatsApp:* ${phoneVal}\n` +
+        `📌 *Project Type:* ${subjectVal}\n` +
+        `💰 *Estimated Budget:* ${budgetVal}\n\n` +
+        `💬 *Message Details:*\n${messageVal}`;
 
-        // Reset form
-        contactForm.reset();
+      const encodedText = encodeURIComponent(formattedMessage);
+      const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedText}`;
 
-        // Revert button status
-        setTimeout(() => {
-          submitBtn.disabled = false;
-          submitBtn.innerHTML = originalText;
-          submitBtn.classList.remove('btn-success');
-          submitBtn.classList.add('btn-primary-custom');
-        }, 3000);
-      }, 1500);
+      // Trigger modal feedback
+      const feedbackModalEl = document.getElementById('formFeedbackModal');
+      if (feedbackModalEl) {
+        const feedbackModal = new bootstrap.Modal(feedbackModalEl);
+        feedbackModal.show();
+      }
+
+      // Reset form fields
+      contactForm.reset();
+
+      // Open WhatsApp link immediately (synchronously) to prevent browser popup blockers from blocking it
+      const newWin = window.open(whatsappUrl, '_blank');
+      if (!newWin || newWin.closed || typeof newWin.closed === 'undefined') {
+        window.location.href = whatsappUrl;
+      }
     });
   }
 });
